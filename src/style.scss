@@ -1,0 +1,450 @@
+@import 'reset/_reset';
+
+$primary: #409dee;
+$secondary: #e5f1ff;
+$danger: #fe522b;
+$simple: #f9fafa;
+$custom: #e2f9eb;
+$light-gray: #ebebeb;
+$gray: #9e9fa1;
+
+@mixin s-size_states {
+  min-width: 60px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  line-height: 1.5em;
+  font-size: 12px;
+}
+
+@mixin m-size_states {
+  min-width: 80px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  line-height: 1.5em;
+  font-size: 12px;
+}
+
+@mixin l-size_states {
+  min-width: 110px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin s-size_sizes {
+  min-width: 50px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 10px;
+}
+
+@mixin m-size_sizes {
+  min-width: 60px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin  l-size_sizes {
+  min-width: 80px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin mini-icon {
+  min-width: 30px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin hover-danger {
+    background: rgba(0,0,0,0);
+    color: $danger;
+    box-shadow: inset 0 0 0 3px $danger;
+}
+
+@mixin hover-primary {
+  background: rgba(0,0,0,0);
+  color: $primary;
+  box-shadow: inset 0 0 0 3px $primary;
+}
+
+@mixin hover-non-style {
+  background: rgba(0,0,0,0);
+  color: black;
+  box-shadow: inset 0 0 0 3px black;
+}
+
+.main {
+  padding: 5%;
+  &__colors {
+    &_title {
+    }
+    &__first-row {
+      &_primary {
+        background-color: $primary;
+        color: white;
+        @include s-size_states;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $secondary;
+        color: $primary;
+        @include s-size_states;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $danger;
+        color: white;
+        @include s-size_states;
+        transition: 1s;
+        &:hover {
+          @include hover-danger;
+        }
+      }
+
+      &_non-styled {
+        @include m-size_states;
+        transition: 1s;
+        &:hover {
+          @include hover-non-style;
+        }
+      }
+    }
+
+    &__second-row {
+      &_primary {
+        background-color: $primary;
+        color: white;
+        @include m-size_states;
+        transition: 1s;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $secondary;
+        color: $primary;
+        transition: 1s;
+        @include m-size_states;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $danger;
+        color: white;
+        @include m-size_states;
+        transition: 1s;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        &:hover {
+          @include hover-danger;
+        }
+      }
+
+      &_non-styled {
+        @include l-size_states;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        transition: 1s;
+        &:hover {
+          @include hover-non-style;
+        }
+      }
+    }
+
+    &__third-row {
+      &_primary {
+        background-color: $light-gray;
+        @include m-size_states;
+        color: $gray;
+        transition: 1s;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $light-gray;
+        @include m-size_states;
+        transition: 1s;
+        color: $gray;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $light-gray;
+        @include m-size_states;
+        color: $gray;
+        transition: 1s;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        &:hover {
+          @include hover-danger;
+        }
+      }
+
+      &_non-styled {
+        background-color: $light-gray;
+        @include l-size_states;
+        color: $gray;
+        > .fa-3x {
+          font-size: 1em;
+        }
+        transition: 1s;
+        &:hover {
+          @include hover-non-style;
+        }
+      }
+    }
+
+    &__fourth-row {
+      &_primary {
+        background-color: $light-gray;
+        @include s-size_states;
+        color: $gray;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $light-gray;
+        @include s-size_states;
+        color: $gray;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $light-gray;
+        @include s-size_states;
+        color: $gray;
+        transition: 1s;
+        &:hover {
+          @include hover-danger;
+        }
+      }
+
+      &_non-styled {
+        background-color: $light-gray;
+        @include m-size_states;
+        transition: 1s;
+        color: $gray;
+        &:hover {
+          @include hover-non-style;
+        }
+      }
+    }
+  }
+  &__sizes {
+    &_title {
+    }
+    &__first-row {
+      &_primary {
+        background-color: $primary;
+        color: white;
+        @include l-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $secondary;
+        color: $primary;
+        @include m-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $danger;
+        color: white;
+        @include s-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-danger;
+        }
+      }
+    }
+  }
+  &__icons {
+    &_title {
+    }
+    &__first-row {
+      &_primary {
+        background-color: $primary;
+        color: white;
+        @include l-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $secondary;
+        color: $primary;
+        @include m-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $danger;
+        color: white;
+        @include s-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-danger;
+        }
+      }
+    }
+    &__second-row {
+      &_primary {
+        background-color: $primary;
+        color: white;
+        @include s-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $secondary;
+        color: $primary;
+        transition: 1s;
+        @include m-size_sizes;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $danger;
+        color: white;
+        @include l-size_sizes;
+        transition: 1s;
+        &:hover {
+          @include hover-danger;
+        }
+      }
+    }
+    &__third-row {
+      &_primary {
+        background-color: $primary;
+        color: white;
+        @include mini-icon;
+        transition: 1s;
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_secondary {
+        background-color: $secondary;
+        @include mini-icon;
+        transition: 1s;
+        > .fa {
+          color: $primary;
+        }
+        &:hover {
+          @include hover-primary;
+        }
+      }
+
+      &_danger {
+        background-color: $danger;
+        @include mini-icon;
+        transition: 1s;
+        > .fa {
+          color: white;
+        }
+        &:hover {
+          @include hover-danger;
+        }
+      }
+    }
+  }
+  &__custom {
+    &_title {
+
+    }
+    &_button {
+      background-color: $custom;
+      min-width: 60px;
+      border-color: #3ccb51;
+      border-radius: 3px;
+      line-height: 2em;
+      font-size: 12px;
+      padding: 0 7px;
+      transition: 1s;
+      > span {
+        position: relative;
+        left: -8px;
+        display: inline-block;
+        height: 25px;
+        width: 20px;
+        background-color: #3ccb51;
+        > .fa {
+          color: white;
+        }
+      }
+      &:hover {
+        background-color: #3ccb51;
+      }
+    }
+  }
+}
