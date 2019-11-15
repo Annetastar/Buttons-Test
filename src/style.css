@@ -418,6 +418,8 @@ body {
       background: rgba(0, 0, 0, 0);
       color: #fe522b;
       box-shadow: inset 0 0 0 3px #fe522b; }
+      .main__icons__third-row_danger:hover > .fa {
+        color: #fe522b; }
   .main__custom_button {
     background-color: #e2f9eb;
     min-width: 60px;

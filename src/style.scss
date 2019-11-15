@@ -414,6 +414,9 @@ $gray: #9e9fa1;
         }
         &:hover {
           @include hover-danger;
+          > .fa {
+            color: $danger;
+          }
         }
       }
     }
