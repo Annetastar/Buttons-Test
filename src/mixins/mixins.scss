@@ -1,0 +1,80 @@
+@mixin s-size_states {
+  min-width: 60px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  line-height: 1.5em;
+  font-size: 12px;
+}
+
+@mixin m-size_states {
+  min-width: 80px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  line-height: 1.5em;
+  font-size: 12px;
+}
+
+@mixin l-size_states {
+  min-width: 110px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin s-size_sizes {
+  min-width: 50px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 10px;
+}
+
+@mixin m-size_sizes {
+  min-width: 60px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin  l-size_sizes {
+  min-width: 80px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin mini-icon {
+  min-width: 30px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+@mixin hover-danger {
+  background: rgba(0,0,0,0);
+  color: $danger;
+  box-shadow: inset 0 0 0 3px $danger;
+}
+
+@mixin hover-primary {
+  background: rgba(0,0,0,0);
+  color: $primary;
+  box-shadow: inset 0 0 0 3px $primary;
+}
+
+@mixin hover-non-style {
+  background: rgba(0,0,0,0);
+  color: black;
+  box-shadow: inset 0 0 0 3px black;
+}
